@@ -14,7 +14,7 @@ Investigar los factores que están provocando la **fuga de talento** en la organ
 
 Trabajamos con un dataset interno limpio de ABC Corporation. Aplicamos un enfoque exploratorio basado en:
 
-- **Estadística descriptiva**
+- **Estadística**
 - **Gráficos comparativos y multivariables**
 - **Creación de perfiles de riesgo**
 - **Análisis de tasas de abandono**
