@@ -1,76 +1,94 @@
-# 🕵️‍♀️ Caso de Estudio: Fuga de Talento en ABC Corporation
+# 📊 Análisis Exploratorio de Datos sobre Recursos Humanos
 
-## 👥 Equipo de Investigación
-
-Somos un equipo de **5 analistas de datos** trabajando en colaboración como unidad de investigación especializada. Nuestra misión: descubrir los patrones ocultos detrás del creciente abandono laboral en la empresa **ABC Corporation**.
-
-## 🎯 Objetivo
-
-Investigar los factores que están provocando la **fuga de talento** en la organización mediante herramientas estadísticas, visualización de datos y análisis cruzado de variables clave.
+### *Equipo de Investigación en Ciencia de Datos*
 
 ---
 
-## 📊 Metodología
+## 🧭 Propósito del análisis
 
-Trabajamos con un dataset interno limpio de ABC Corporation. Aplicamos un enfoque exploratorio basado en:
+Este estudio forma parte de una investigación basada en datos del ámbito de los **Recursos Humanos**, con el objetivo de identificar patrones, correlaciones y factores asociados al abandono laboral, la satisfacción profesional y el desarrollo interno.
 
-- **Estadística**
-- **Gráficos comparativos y multivariables**
-- **Creación de perfiles de riesgo**
-- **Análisis de tasas de abandono**
+El análisis se centra en un conjunto de datos que recoge variables clave sobre la plantilla de una organización, incluyendo indicadores de rendimiento, historial laboral, promociones, formación, evaluación y otros aspectos organizativos.
 
 ---
 
-## 🔍 Preguntas clave investigadas
+## ⚙️ Metodología y proceso de análisis
 
-1. ¿Los empleados con ingresos bajos se van más?
-2. ¿Influye el aumento salarial en la retención?
-3. ¿Afecta la falta de stock options?
-4. ¿Se van más los empleados con poca formación reciente?
-5. ¿Los que llevan años sin promoción abandonan más?
-6. ¿Qué perfiles concentran mayor riesgo de fuga?
+El trabajo se ha desarrollado aplicando el marco de trabajo **Agile con metodología Scrum**, organizando tareas en sprints, realizando reuniones de seguimiento y gestionando el flujo de trabajo en equipo de forma iterativa y colaborativa.
 
----
+**Fases del análisis:**
 
-## 📁 Análisis destacados
+1. 📥 **Importación y tratamiento de datos**
 
-- Segmentación por grupos salariales (`Income_Group`)
-- Conversión de variables clave a formato numérico y categórico
-- Visualizaciones con `seaborn` y `matplotlib`
-- Análisis cruzado: satisfacción, salario, promoción, overtime, formación, desempeño...
-- Detección de **perfiles infravalorados y desmotivados**
+   * Lectura del dataset `HR RAW DATA CLEAN.csv`.
+   * Detección y tratamiento de valores nulos con técnicas estadísticas (`SimpleImputer`, `KNNImputer`, `IterativeImputer`).
 
----
+2. 📊 **Análisis exploratorio (EDA)**
 
-## 🧠 Conclusiones
+   * Visualización de variables con `seaborn` y `matplotlib`.
+   * Análisis de distribuciones, outliers, correlaciones.
 
-Descubrimos que la fuga de talento afecta principalmente a empleados:
+3. 🧮 **Consulta analítica**
 
-- Con **alta formación** pero **salario bajo**
-- Con **años sin promoción** pese a buen rendimiento
-- Que **hacen horas extra** sin recompensa
-- Que **no reciben formación interna**
-- Sin acceso a incentivos como **stock options**
+   * Segmentación y comparativas entre perfiles.
+   * Análisis de riesgo de abandono, satisfacción y desarrollo.
+
+4. 🧠 **Interpretación y síntesis**
+
+   * Conclusiones fundamentadas y recomendaciones accionables.
+
+5. 🎤 **Presentación de resultados**
+
+   * Comunicación clara y visual a través de **Canva**.
 
 ---
 
 ## 🛠️ Herramientas utilizadas
 
-- **Python**: pandas, seaborn, matplotlib
-- **Visualización**: histogramas, barplots, scatterplots, heatmaps
-- **Colaboración**: Zoom, Slack, GitHub
-- **Asistencia IA**: ChatGPT como soporte de análisis y documentación
+| Categoría              | Herramientas principales                                              |
+| ---------------------- | --------------------------------------------------------------------- |
+| **Lenguaje y entorno** | Python, Jupyter Notebook                                              |
+| **Librerías**          | `pandas`, `numpy`, `matplotlib`, `seaborn`, `sklearn.impute`, `re`    |
+| **Colaboración**       | GitHub (control de versiones), Slack (comunicación), Zoom (reuniones) |
+| **Visualización**      | Canva (presentación final)                                            |
+| **Soporte técnico**    | ChatGPT (documentación, revisión técnica, apoyo analítico)            |
 
 ---
 
-## 🧩 Próximos pasos
+## 📓 Estructura del notebook
 
-- Proponer políticas internas basadas en los perfiles de riesgo detectados
-- Automatizar el monitoreo de fuga de talento
-- Presentar los hallazgos a Recursos Humanos
+🔹 **Importación y configuración inicial**
+🔹 **Limpieza y tratamiento de datos**
+🔹 **Exploración visual y análisis descriptivo**
+🔹 **Comparativas y correlaciones relevantes**
+🔹 **Conclusiones y síntesis narrativa**
+
+Cada sección contiene código comentado, visualizaciones interpretadas y lógica de análisis documentada para garantizar trazabilidad y reproducibilidad.
 
 ---
 
-> **El talento no se va por casualidad. Huye cuando no se siente visto.**
+## ✅ Conclusiones clave
 
-## Aquí puedes acceder a nuestra presentación
+✔️ Identificación de variables asociadas a la rotación laboral.
+✔️ Diferenciación de perfiles según satisfacción, evaluaciones y promociones.
+✔️ Visualizaciones claras que facilitan la toma de decisiones estratégicas en RRHH.
+✔️ Posible base para modelos predictivos futuros.
+
+---
+
+## 🔗 Acceso a la presentación
+
+📽️ Puedes consultar la presentación de resultados en el siguiente enlace:
+
+👉 [Ver presentación en Canva](https://enlace-a-la-presentacion.com)
+
+---
+
+## 💻 Repositorio del proyecto en GitHub
+
+Todo el análisis, código y documentación está disponible en el repositorio colaborativo:
+
+🔗 [https://github.com/usuario/nombre-del-repositorio](https://github.com/usuario/nombre-del-repositorio) 
+
+
+
