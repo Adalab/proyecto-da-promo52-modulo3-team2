@@ -80,7 +80,7 @@ Cada sección contiene código comentado, visualizaciones interpretadas y lógic
 
 📽️ Puedes consultar la presentación de resultados en el siguiente enlace:
 
-👉 [Ver presentación en Canva](https://enlace-a-la-presentacion.com)
+👉[ [Ver presentación en Canva](https://enlace-a-la-presentacion.com)](https://www.canva.com/design/DAGpY6S5e70/9goSn0AFUDrdxB_i_VhJYQ/edit?utm_content=DA[…]m_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
 
 ---
 
@@ -88,7 +88,7 @@ Cada sección contiene código comentado, visualizaciones interpretadas y lógic
 
 Todo el análisis, código y documentación está disponible en el repositorio colaborativo:
 
-🔗 [https://github.com/usuario/nombre-del-repositorio](https://github.com/usuario/nombre-del-repositorio) 
+🔗[(https://github.com/usuario/nombre-del-repositorio)](https://github.com/Adalab/proyecto-da-promo52-modulo3-team2.git) 
 
 
 
