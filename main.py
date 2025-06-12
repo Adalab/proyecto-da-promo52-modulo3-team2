@@ -22,3 +22,4 @@ if __name__ == "__main__":
     )
 
 
+# ejecutar el script principal: python main.py

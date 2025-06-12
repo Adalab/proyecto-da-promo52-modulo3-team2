@@ -2,6 +2,8 @@ import pandas as pd
 import pymysql
 from sqlalchemy import create_engine 
 import matplotlib.pyplot as plt 
+import numpy as np
+
 
 # Configuración de la base de datos
 host = '127.0.0.1'
@@ -102,24 +104,69 @@ def eda_basico(df):
     print(df.dtypes.value_counts())
     print('________________________________________________________________________________________________________')
 
-    return df
 
 # =====================
 # TRANSFORM: Limpia, transformar los datos y visualiza histogramas
 # =====================
 
+def cambio_objt_int(cadena):
+   
+    try:
+        # Reemplazar las comas por puntos en la cadena
+        return float(cadena.replace(",", "."))
+    
+    except:
+        # Si ocurre algún error (por ejemplo, si el argumento no es una cadena),
+        # devolver np.nan (valor Not a Number) para indicar un valor inválido o no disponible.
+        return np.nan
+
 def transform_data(df):
     """
-    Limpieza básica: nulos, duplicados, minúsculas en nombres.
+    Limpieza básica: eliminar columnas irrelevantes, corregir valores textuales, 
+    transformar a minúsculas, eliminar duplicados y nulos.
     """
     print("🧼 Transformando datos...")
     initial_shape = df.shape
-    #df = df.dropna()
-    df = df.drop_duplicates()
+
+    # 💡 Normalizar nombres columnas primero
     df.columns = df.columns.str.strip().str.lower()
+
+    # 💥 Ahora que las columnas están en minúscula, puedes trabajar con ellas
+    df.drop(["employeecount", "numberchildren", "salary", "sameasmonthlyincome"], axis=1, inplace=True, errors='ignore')
+
+    # ✅ Asegúrate de que el nombre sea el correcto según el CSV original
+    if 'dailyrate' in df.columns:
+        df['dailyrate'] = df['dailyrate'].astype(str).str.replace('$', '', regex=False)
+        df['dailyrate'] = df['dailyrate'].apply(cambio_objt_int)
+    else:
+        print("⚠️ Advertencia: columna 'dailyrate' no encontrada.")
+
+    # Reemplazos para columna age (si existe)
+    edad_map = {
+        'forty-seven': '47',
+        'fifty-eight': '58',
+        'thirty-six': '36',
+        'fifty-five': '55',
+        'fifty-two': '52',
+        'thirty-one': '31',
+        'twenty-six': '26',
+        'thirty-seven': '37',
+        'thirty-two': '32',
+        'twenty-four': '24',
+        'thirty': '30'
+    }
+
+    if 'age' in df.columns:
+        df['age'] = df['age'].replace(edad_map)
+        df['age'] = df['age'].apply(cambio_objt_int)
+    else:
+        print("⚠️ Advertencia: columna 'age' no encontrada.")
+
+    df = df.drop_duplicates()
+    #df = df.dropna()
+
     print(f"✅ Datos limpios: {initial_shape} ➝ {df.shape}")
     return df
-
 
 
 def histogramas_variables_num(df, bins=30):
@@ -201,15 +248,14 @@ def etl_process(nombre_archivo, nombre_tabla, archivo_limpio='archivo_limpio.csv
     Ejecuta el proceso completo de ETL.
     """
     print("🚀 Iniciando proceso ETL...")
-    create_db()
 
     df = extract_data(nombre_archivo)
     if df is not None:
         if hacer_eda:
             eda_basico(df)
-        
         df_clean = transform_data(df)
         guardar(df_clean, archivo_limpio)
+        create_db()
         load_data(nombre_tabla, df_clean)
     print("✅ Proceso ETL completado.") 
 
