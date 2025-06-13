@@ -40,6 +40,7 @@ El trabajo se ha desarrollado aplicando el marco de trabajo **Agile con metodolo
 5. 🎤 **Presentación de resultados**
 
    * Comunicación clara y visual a través de **Canva**.
+   * https://www.canva.com/design/DAGpY6S5e70/9goSn0AFUDrdxB_i_VhJYQ/edit?utm_content=DAGpY6S5e70&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
 
 ---
 
